@@ -3,10 +3,14 @@
 /**
  * print_char - prints any given character
  * @args: character to print
+ *
+ * Return: 1
  */
-void print_char(va_list *args)
+int print_char(va_list *args)
 {
-	char letter = va_arg(args, int);
+	char letter = va_arg(*args, int);
 
 	_putchar(letter);
+
+	return (1);
 }
