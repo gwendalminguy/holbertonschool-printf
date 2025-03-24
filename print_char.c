@@ -8,10 +8,10 @@
  */
 int print_char(va_list *args)
 {
-	char letter = va_arg(*args, int);
+	int letter = va_arg(*args, int);
 
 	if (letter == '\0')
-		return (0);
+		return (1);
 
 	_putchar(letter);
 
