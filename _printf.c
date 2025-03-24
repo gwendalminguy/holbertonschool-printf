@@ -29,11 +29,15 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
+		{
 			_putchar(format[i]);
+			total++;
+		}
 
 		else if (format[i + 1] == '%')
 		{
 			_putchar('%');
+			total++;
 			i++;
 		}
 
