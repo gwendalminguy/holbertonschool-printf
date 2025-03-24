@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			total++;
 		}
 
-		else if (format[i + 1] == '%')
+		else if (format[i + 1] == '%' || format[i + 1] == '\0')
 		{
 			_putchar('%');
 			total++;
