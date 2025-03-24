@@ -7,7 +7,7 @@
  *
  * @format: ...
  *
- * Return: ...
+ * Return: number of characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 
 		else
 		{
+			i++;
 			j = 0;
 
 			while (format[i] != '\0' && format[i] != conv.id[j])
@@ -45,8 +46,6 @@ int _printf(const char *format, ...)
 
 			if (conv.id[j] != '\0')
 				conv[j].fptr(&args);
-
-			i++;
 		}
 
 		i++;
