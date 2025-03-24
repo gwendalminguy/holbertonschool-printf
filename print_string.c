@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-int print_string(va_list *args);
+int print_string(va_list *args)
 {
 
 	int i;
