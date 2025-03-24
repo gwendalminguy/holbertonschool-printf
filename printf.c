@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	unsigned int i = 0;
 	unsigned int j = 0;
-	va_list *args;
+	va_list args;
 
 	/* Declaring and initializing a structure of type conv_t */
 	conv_t conv[] = {
@@ -41,11 +41,11 @@ int _printf(const char *format, ...)
 			i++;
 			j = 0;
 
-			while (format[i] != '\0' && format[i] != conv->id[j])
+			while (format[i] != '\0' && format[i] != conv[j].id)
 				j++;
 
-			if (conv.id[j] != '\0')
-				conv[j]->fptr(&args);
+			if (conv[j].id != '\0')
+				conv[j].fptr(&args);
 		}
 
 		i++;
