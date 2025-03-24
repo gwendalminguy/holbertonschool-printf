@@ -12,6 +12,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0;
+	unsigned int j = 0;
 	va_list *args;
 
 	/* Declaring and initializing a structure of type conv_t */
@@ -26,11 +27,14 @@ int _printf(const char *format, ...)
 	/* Going through each character of format */
 	while (format[i] != '\0')
 	{
-		if (format[i] != '%' && format[i - 1] != '%')
+		if (format[i] != '%')
 			_putchar(format[i]);
 
-		else if (format[i] == '%' && format[i - 1] == '%')
+		else if (format[i + 1] == '%')
+		{
 			_putchar('%');
+			i++;
+		}
 
 		else
 		{
@@ -42,8 +46,7 @@ int _printf(const char *format, ...)
 			if (conv.id[j] != '\0')
 				conv[j].fptr(&args);
 
-			else
-				...
+			i++;
 		}
 
 		i++;
