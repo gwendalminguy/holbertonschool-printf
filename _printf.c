@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 {
 	unsigned int i = 0;
 	unsigned int j = 0;
+	unsigned int total = 0;
 	va_list args;
 
 	/* Declaring and initializing a structure of type conv_t */
@@ -45,7 +46,7 @@ int _printf(const char *format, ...)
 				j++;
 
 			if (conv[j].id != '\0')
-				conv[j].fptr(&args);
+				total += conv[j].fptr(&args);
 		}
 
 		i++;
@@ -53,5 +54,5 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 
-	return (i);
+	return (total);
 }
