@@ -41,11 +41,11 @@ int _printf(const char *format, ...)
 			i++;
 			j = 0;
 
-			while (format[i] != '\0' && format[i] != conv.id[j])
+			while (format[i] != '\0' && format[i] != conv->id[j])
 				j++;
 
 			if (conv.id[j] != '\0')
-				conv[j].fptr(&args);
+				conv[j]->fptr(&args);
 		}
 
 		i++;
