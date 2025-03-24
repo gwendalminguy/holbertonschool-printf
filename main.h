@@ -10,18 +10,18 @@
  * @id : identifier for a type
  * @*fptr : A function pointer to a function
  */
-
-
 struct conv
 {
 	char id; 
-	void (*fptr)(va_list); 
+	int (*fptr)(va_list *args); 
 };
 
 typedef struct conv conv_t;
 
 /* All our functions*/
-void print_string(va_list);
-void print_char(va_list);
+int _printf(const char *format, ...);
+int _putchar(char c);
+int print_string(va_list *args);
+int print_char(va_list *args);
 
 #endif
