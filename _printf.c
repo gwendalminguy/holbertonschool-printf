@@ -52,6 +52,9 @@ int _printf(const char *format, ...)
 			if (conv[j].id != '\0')
 				total += conv[j].fptr(&args);
 		}
+		
+		if (format[i] == '\0')
+			break;
 
 		i++;
 	}
