@@ -1,7 +1,7 @@
 #ifndef PRINT_F
 #define PRINT_F
 
-#include <starg.h>
+#include <stdarg.h>
 #include <stlib.h>
 #include <unistd.h>
 
