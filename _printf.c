@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * _printf - ...
+ * _printf - prints any formatted string
  *
  * Description: ...
  *
- * @format: ...
+ * @format: formatted string to print
  *
  * Return: number of characters printed
  */
@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 	conv_t conv[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
 		{'\0', NULL}
 	};
 	va_start(args, format);
@@ -44,15 +46,16 @@ int _printf(const char *format, ...)
 				j++;
 			if (conv[j].id != '\0')
 				total += conv[j].fptr(&args);
-			else
+			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
 				total++;
-				if (format[i + 1] != '%')
-				{
-					_putchar(format[i + 1]);
-					total++;
-				}
+			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[i + 1]);
+				total += 2;
 			}
 			i++;
 		}
