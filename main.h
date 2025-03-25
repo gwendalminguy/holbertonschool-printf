@@ -19,10 +19,12 @@ struct conv
 typedef struct conv conv_t;
 
 /* All our functions*/
-int _printf(const char *format, ...);
 int _putchar(char c);
-int print_string(va_list *args);
+int _printf(const char *format, ...);
 int print_char(va_list *args);
+int print_string(va_list *args);
 int print_int(va_list *args);
+int print_binary(va_list *args);
+int raise(int n, int p);
 
 #endif
