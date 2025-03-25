@@ -34,19 +34,22 @@ int _printf(const char *format, ...)
 			total++;
 		}
 
-		else if (format[i + 1] == '%' || format[i + 1] == '\0')
+		else if (format[i + 1] == '%')
 		{
 			_putchar('%');
 			total++;
 			i++;
 		}
 
+		else if (format[i + 1] == '\0')
+			break;
+
 		else
 		{
 			i++;
 			j = 0;
 
-			while (format[i] != '\0' && format[i] != conv[j].id)
+			while (conv[j].id != '\0' && format[i] != conv[j].id)
 				j++;
 
 			if (conv[j].id != '\0')
