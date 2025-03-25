@@ -25,6 +25,6 @@ int print_char(va_list *args);
 int print_string(va_list *args);
 int print_int(va_list *args);
 int print_binary(va_list *args);
-int raise(int n, int p);
+long int raise(long int n, int p);
 
 #endif

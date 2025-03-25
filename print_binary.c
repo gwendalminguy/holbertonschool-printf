@@ -8,8 +8,9 @@
  */
 int print_binary(va_list *args)
 {
-	int n = va_arg(*args, int);
-	int len = 0, power = 0, value = 0;
+	long int n = va_arg(*args, long int);
+	long int value = 0;
+	int len = 0, power = 0;
 
 	if (n == 0)
 	{
@@ -50,9 +51,9 @@ int print_binary(va_list *args)
  *
  * Return: result
  */
-int raise(int n, int p)
+long int raise(long int n, int p)
 {
-	int result = 1;
+	long int result = 1;
 
 	while (p > 0)
 	{
