@@ -16,6 +16,8 @@ int print_binary(va_list *args)
 		_putchar('0');
 		return (1);
 	}
+	else if (n < 0)
+		n = -n;
 
 	/* Getting number of digits of n in binary */
 	while (raise(2, len) <= n)
