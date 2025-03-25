@@ -55,12 +55,8 @@ int _printf(const char *format, ...)
 			else
 			{
 				_putchar('%');
-				total++;
-				if (format[i + 1] != '%')
-				{
-					_putchar(format[i + 1]);
-					total++;
-				}
+				_putchar(format[i + 1]);
+				total += 2;
 			}
 			i++;
 		}
