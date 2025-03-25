@@ -1,10 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _printf - prints any formatted string
  *
- * Description: ...
+ * Description: prints any string with format specifiers:
+ * 		%c prints a character
+ * 		%s prints a string
+ * 		%i / %d prints an integer
+ * 		%b prints an integer in binary format
  *
  * @format: formatted string to print
  *
