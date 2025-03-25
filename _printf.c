@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 	conv_t conv[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
 		{'\0', NULL}
 	};
 	va_start(args, format);
