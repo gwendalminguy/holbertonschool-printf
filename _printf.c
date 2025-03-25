@@ -46,21 +46,19 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			i++;
 			j = 0;
-			while (conv[j].id != '\0' && format[i] != conv[j].id)
+			while (conv[j].id != '\0' && format[i + 1] != conv[j].id)
 				j++;
 			if (conv[j].id != '\0')
 				total += conv[j].fptr(&args);
 			else
 			{
 				_putchar('%');
-				_putchar(format[i]);
+				_putchar(format[i + 1]);
 				total += 2;
 			}
+			i++;
 		}
-		if (format[i] == '\0')
-			break;
 		i++;
 	}
 	va_end(args);
