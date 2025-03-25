@@ -8,9 +8,9 @@
  */
 int print_char(va_list *args)
 {
-	int letter = va_arg(*args, int);
+	int letter = va_arg(*args, int); /* Get the character from the va_list */
 
-	_putchar(letter);
+	_putchar(letter); /* Print the character*/
 
-	return (1);
+	return (1); /* Return 1 to indicate one character has been printed*/
 }
