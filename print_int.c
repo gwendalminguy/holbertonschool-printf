@@ -13,7 +13,7 @@ int print_int(va_list *args)
 	unsigned int count = 1;
 
 	len = 0;
-	value = va_args(*args , int);
+	value = va_arg(*args , int);
 
 	if (value < 0)/* Manage negative numbers*/
 	{
@@ -33,7 +33,7 @@ int print_int(va_list *args)
 
 	while(count >= 1)/* Extract and print each digit*/
 	{
-		len = len + _putchar(((abs/count) % 10) + '0')/* Print each digit of the number*/
+		len = len + _putchar(((abs/count) % 10) + '0');/* Print each digit of the number*/
 			count = count / 10; /* Move into the next digit*/
 	}
 	/* Return the total number of character printed*/
