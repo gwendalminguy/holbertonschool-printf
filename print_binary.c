@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_binary - prints any given unsigned integer in binary
+ * print_binary - prints any given integer in binary
  * @args: integer to print
  *
  * Return: number of digits printed
@@ -9,7 +9,6 @@
 int print_binary(va_list *args)
 {
 	long int n = va_arg(*args, long int);
-	long int value = 0;
 	int len = 0, power = 0;
 
 	if (n == 0)
@@ -25,15 +24,14 @@ int print_binary(va_list *args)
 		len++;
 
 	power = len - 1;
-	value = n;
 
-	/* Printing each digit */
+	/* Printing 0 or 1 for each power of 2 (from highest to 0) */
 	while (power >= 0)
 	{
-		if (value >= raise(2, power))
+		if (n >= raise(2, power))
 		{
 			_putchar('1');
-			value = value % raise(2, power);
+			n = n % raise(2, power);
 		}
 		else
 			_putchar('0');
