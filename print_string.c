@@ -6,7 +6,6 @@
  *
  * Return: The number of characters printed (excluding the null byte)
  */
->>>>>>> sofian
 int print_string(va_list *args)
 {
 
