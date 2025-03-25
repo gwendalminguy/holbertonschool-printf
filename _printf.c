@@ -12,8 +12,7 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0;
-	unsigned int j = 0;
+	unsigned int i = 0, j = 0;
 	int total = 0;
 	va_list args;
 
@@ -33,12 +32,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			total++;
 		}
-		else if (format[i + 1] == '%')
-		{
-			_putchar('%');
-			total++;
-			i++;
-		}
 		else if (format[i + 1] == '\0')
 		{
 			total--;
@@ -54,8 +47,12 @@ int _printf(const char *format, ...)
 			else
 			{
 				_putchar('%');
-				_putchar(format[i + 1]);
-				total += 2;
+				total++;
+				if (format[i + 1] != '%')
+				{
+					_putchar(format[i + 1]);
+					total++;
+				}
 			}
 			i++;
 		}
