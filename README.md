@@ -12,7 +12,6 @@ The key challenge was to replicate the behavior of the standard `printf` functio
 
 ## 🛠 Features
 
-## Features
 Our custom `printf` function supports the following features:
 - Displaying integers (`int`).
 - Displaying characters (`char`).
@@ -32,3 +31,4 @@ The project contains several files, with the following key ones:
 | `print_string.c` | Function that `print` a string to  the standard output. |
 |`print_int.c`| Function to `print` any given integer in decimal|
  `_putchar.c`| Contains auxiliary function `_putchar` to display a character|
+|`man_3_printf`| Manual page of our function `printf`|
