@@ -1,4 +1,4 @@
-# # Project: Creating Our Own `printf` Function
+# 🚀 Project: Creating Our Own `printf` Function
 
 Welcome to our custom `printf` function project! 🎉
 
@@ -25,7 +25,7 @@ Our custom `printf` function supports the following features:
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Vim](https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white)
 
-## 🔧 Project Structure
+## 📂 Project Structure
 The project contains several files, with the following key ones:
 
 | Files | Description  |
@@ -39,7 +39,7 @@ The project contains several files, with the following key ones:
  `_putchar.c`| Contains auxiliary function `_putchar` to display a character|
 |`man_3_printf`| Manual page of our function `printf`|
 
-## 💥 Compilation and Restrictions
+## ⚙️ Compilation and Restrictions
 
 Our code will be compiled this way:
 
