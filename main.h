@@ -6,21 +6,22 @@
 #include <unistd.h>
 
 /**
- * struct conv : Define a structure of functions and arguments identifier
- * @id : identifier for a type
- * @*fptr : A function pointer to a function
+ * struct conv - structure of type identifiers and function pointers
+ * @id: identifier for a type
+ * @fptr: matching function pointer
  */
 struct conv
 {
-	char id; 
-	int (*fptr)(va_list *args); 
+	char id;
+	int (*fptr)(va_list *args);
 };
 
 typedef struct conv conv_t;
 
-/* All our functions*/
+/* all functions prototypes */
 int _putchar(char c);
 int _printf(const char *format, ...);
+int (*get_function(char c))(va_list *args);
 int print_char(va_list *args);
 int print_string(va_list *args);
 int print_int(va_list *args);

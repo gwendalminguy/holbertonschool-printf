@@ -4,10 +4,10 @@
  * _printf - prints any formatted string
  *
  * Description: prints any string with format specifiers:
- * 		%c prints a character
- * 		%s prints a string
- * 		%i / %d prints an integer
- * 		%b prints an integer in binary format
+ *		%c prints a character
+ *		%s prints a string
+ *		%i / %d prints an integer
+ *		%b prints an integer in binary format
  *
  * @format: formatted string to print
  *
@@ -15,22 +15,12 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0;
 	int total = 0;
 	va_list args;
 
-	/* Declaring and initializing a structure of type conv_t */
-	conv_t conv[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'d', print_int},
-		{'i', print_int},
-		{'b', print_binary},
-		{'\0', NULL}
-	};
-	va_start(args, format);
-
 	/* Going through each character of format */
+	va_start(args, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
@@ -45,11 +35,9 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			j = 0;
-			while (conv[j].id != '\0' && format[i + 1] != conv[j].id)
-				j++;
-			if (conv[j].id != '\0')
-				total += conv[j].fptr(&args);
+			/* Searching for a conversion specifier */
+			if (get_function(format[i + 1]) != NULL)
+				total += get_function(format[i + 1])(&args);
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
