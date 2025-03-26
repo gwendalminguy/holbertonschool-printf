@@ -37,4 +37,18 @@ The project contains several files, with the following key ones:
 
 Our code will be compiled this way:
 
-`**gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c**`
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
+
+**The restrictions are as follows**:
+
+- No more than **5** functions per file
+- Not allowed to use global variables
+- Some authorized functions and macros
+	
+	- `write`
+	- `malloc`
+	- `free`
+	- `va_start`
+	- `va_end`
+	- `va_copy`
+	- `va_arg`
