@@ -18,6 +18,12 @@ Our custom `printf` function supports the following features:
 - Displaying strings (`string`).
 - Handling variadic arguments using `va_list` and `va_arg`.
 
+## 🔧 Technologies Used
+
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![GCC](https://img.shields.io/badge/GCC-343741?style=for-the-badge&logo=gnu&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Vim](https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white)
 
 ## 🔧 Project Structure
 The project contains several files, with the following key ones:
@@ -33,7 +39,7 @@ The project contains several files, with the following key ones:
  `_putchar.c`| Contains auxiliary function `_putchar` to display a character|
 |`man_3_printf`| Manual page of our function `printf`|
 
-## Compilation and Restrictions
+## 💥 Compilation and Restrictions
 
 Our code will be compiled this way:
 
@@ -63,6 +69,7 @@ It helps ensure our code is:
 	- `va_end`
 	- `va_copy`
 	- `va_arg`
+
 
 ## 🧩 Use in Code
 
@@ -95,7 +102,8 @@ int main(void)
 	_printf("The first letter in the name Hugo is %c.\n")
 
 	return(0);
-}```
+}
+```
 
 **Now let's take a look at the output**
 
