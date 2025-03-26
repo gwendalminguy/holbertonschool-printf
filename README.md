@@ -19,7 +19,7 @@ Our custom `printf` function supports the following features:
 - Handling variadic arguments using `va_list` and `va_arg`.
 
 
-## Project Structure
+## 🔧 Project Structure
 The project contains several files, with the following key ones:
 
 | Files | Description  |
@@ -67,12 +67,14 @@ It helps ensure our code is:
 ## 🧩 Use in Code
 
 **Let's take a look at what our** `_printf` **function actually does when implemented in your code with 
-a **`string` **variable** (`s`).
+a** `string` **specifier** (`s`).
 
 ```
 int main(void)
 {
-    	_printf("Gwendal is a %s.\n",monster);
+	char *str = "monster";
+
+    	_printf("Gwendal is a %s.\n",str);
     
 	return(0);
 }
@@ -82,4 +84,20 @@ int main(void)
 
 `$ Gwendal is a monster.`
 
+
+**For the second example , let's see what the function** `_printf` **does with a** `character` **specifier** (`c`).
+
+```
+int main(void)
+{
+	char c = 'H'
+	
+	_printf("The first letter in the name Hugo is %c.\n")
+
+	return(0);
+}```
+
+**Now let's take a look at the output**
+
+`$ The first letter in the name Hugo is H.`
 
