@@ -4,7 +4,7 @@ Welcome to our custom `printf` function project! 🎉
 
 In this project, our goal was to create our own version of the popular `printf` function, commonly used in C for formatted output. We worked as a team to develop a simplified version of `printf`, handling different format specifiers and output formatting features.
 
-## 🚀 Project Overview
+## 📋 Project Overview
 
 The custom `printf` implementation allows users to print formatted data to the standard output. It can handle various specifiers like `%d`, `%s`, `%c`, `%i` and more.
 
