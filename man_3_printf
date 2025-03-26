@@ -1,0 +1,80 @@
+.TH _PRINTF 3 "March 26, 2025"
+.LO 1
+
+.SH
+NAME
+.B _printf
+- prints any formatted string
+
+.SH
+SYNOPSIS
+.B int _printf(const char *\fIFORMAT\fR, \fIARGUMENT\fR...);
+
+.SH
+DESCRIPTION
+Prints the string \fIFORMAT\fR by converting, if any, each \fIARGUMENT\fR according to a mentionned conversion specifier. The function writes the output to \fISTDOUT\fR.
+
+.SH
+Conversion Specifiers
+Characters that can be used to apply a specific conversion to ARGUMENT. A conversion specifier can be invoked by using the symbol '%', followed by its name. If multiple conversion specifiers are invoked in string FORMAT, they will be applied to each ARGUMENT respectively. The supported conversion specifiers and their meaning are the following:
+.PP
+.RS
+.IP %
+The '%' symbol will be printed.
+.IP c
+The \fIint\fR ARGUMENT is converted to a character.
+.IP s
+The \fIchar *\fR ARGUMENT is converted to a sequence of characters.
+.IP "i, d"
+The \fIint\fR ARGUMENT is converted to decimal notation.
+.IP b
+The \fIlong int\fR ARGUMENT is converted to binary notation.
+.RE
+
+The function works by iterating through each character of FORMAT. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the ARGUMENT. If the '%' symbol is provided and followed by a character for an unknown/unsupported conversion specifier, the function will simply print '%' followed by the given character, regardless of any ARGUMENT.
+
+.SH
+RETURN VALUE
+When successful, the function returns the total number of bytes printed, including the bytes of every \fIARGUMENT\fR, but excluding the null byte '\\0' terminating a string.
+In case of error, the function will execute and return a negative value (-1).
+
+.SH
+ERRORS
+If the last character of the string \fIFORMAT\fR consist in a single '%' character, the function will print the rest of the string and return a negative value.
+If the number of conversion specifiers given in \fIFORMAT\fR is greater than the number of \fIARGUMENT\fR provided, a segentation fault will occur.
+If the type of an \fIARGUMENT\fR does not match the expected type of the conversion specifier used in the string \fIFORMAT\fR, a segmentation fault will occur.
+
+.SH
+EXAMPLES
+.IP
+_printf("Character:[%c]", 'A');
+.br
+.B
+Output:
+Character:[A]
+.IP
+_printf("String:[%s]", "Hello, World!");
+.br
+.B
+Output:
+String:[Hello, World!]
+.IP 
+_printf("Integer:[%i]", 2025);
+.br
+.B
+Output:
+Integer:[2025]
+.IP
+_printf("Binary:[%b]", 2025);
+.br
+.B
+Output:
+Binary:[11111101001]
+
+.SH
+AUTHORS
+Messaoui Sofian, Minguy-Pèlerin Gwendal
+
+.SH
+SEE ALSO
+printf(3), puts(3), putchar(3), write(3)
