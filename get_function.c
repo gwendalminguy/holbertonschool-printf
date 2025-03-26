@@ -6,10 +6,10 @@
  *
  * Return: the right function pointer when successful ; NULL otherwise
  */
-int (*get_function (char c))(va_list *args)
+int (*get_function(char c))(va_list * args)
 {
 	unsigned int j = 0;
-	
+
 	/* Declaring and initializing a structure of type conv_t */
 	conv_t conv[] = {
 		{'c', print_char},
@@ -19,7 +19,7 @@ int (*get_function (char c))(va_list *args)
 		{'b', print_binary},
 		{'\0', NULL}
 	};
-	
+
 	/* Iterating through each row to find a match between c and id */
 	while (conv[j].id)
 	{
