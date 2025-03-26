@@ -45,7 +45,9 @@ This command is used to strictly compile all C files in our project.
 It helps ensure our code is:
 
 ✅ Clean
+
 ✅ Follows C coding standards
+
 ✅ Free from common bugs
 
 **The restrictions are as follows**:
@@ -62,19 +64,22 @@ It helps ensure our code is:
 	- `va_copy`
 	- `va_arg`
 
-## Use in Code
+## 🧩 Use in Code
 
-***Let's take a look at what our `_printf` function actually does when implemented in your code.***
+**Let's take a look at what our** `_printf` **function actually does when implemented in your code with 
+a **`string` **variable** (`s`).
 
-
-	```bash
+```
 int main(void)
 {
-    _printf("Gwendal is a %s.\n",monster);
-    return(0);
+    	_printf("Gwendal is a %s.\n",monster);
+    
+	return(0);
 }
 ```
 
-***Now let's take a look at the output***
+**iNow let's take a look at the output**
 
-``$ Gwendal is a monster.``
+`$ Gwendal is a monster.`
+
+
