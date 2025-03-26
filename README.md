@@ -32,3 +32,9 @@ The project contains several files, with the following key ones:
 |`print_int.c`| Function to `print` any given integer in decimal|
  `_putchar.c`| Contains auxiliary function `_putchar` to display a character|
 |`man_3_printf`| Manual page of our function `printf`|
+
+## Compilation and Restrictions
+
+Our code will be compiled this way:
+
+`**gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c**`
