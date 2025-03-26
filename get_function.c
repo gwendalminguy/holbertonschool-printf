@@ -17,6 +17,7 @@ int (*get_function(char c))(va_list * args)
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_binary},
+		{'o', print_octal},
 		{'\0', NULL}
 	};
 
