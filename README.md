@@ -39,6 +39,15 @@ Our code will be compiled this way:
 
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
 
+💡 What does it do?
+
+This command is used to strictly compile all C files in our project.
+It helps ensure our code is:
+
+✅ Clean
+✅ Follows C coding standards
+✅ Free from common bugs
+
 **The restrictions are as follows**:
 
 - No more than **5** functions per file
@@ -52,3 +61,20 @@ Our code will be compiled this way:
 	- `va_end`
 	- `va_copy`
 	- `va_arg`
+
+## Use in Code
+
+***Let's take a look at what our `_printf` function actually does when implemented in your code.***
+
+
+	```bash
+int main(void)
+{
+    _printf("Gwendal is a %s.\n",monster);
+    return(0);
+}
+```
+
+***Now let's take a look at the output***
+
+``$ Gwendal is a monster.``
