@@ -31,5 +31,6 @@ long int raise(long int n, int p);
 int print_octal(va_list *args);
 int print_hexadecimal_lower(va_list *args);
 int print_hexadecimal_upper(va_list *args);
+int print_rot13(va_list *args);
 
 #endif

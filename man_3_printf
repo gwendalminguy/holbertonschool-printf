@@ -23,13 +23,15 @@ The \fIchar *\fR ARGUMENT is converted to a sequence of characters.
 .IP "i, d"
 The \fIint\fR ARGUMENT is converted to decimal notation.
 .IP u
-The \fIunsigned long int\fR ARGUMENT is converted to unsigned notation.
+The \fIint\fR ARGUMENT is converted to unsigned notation.
 .IP b
-The \fIlong int\fR ARGUMENT is converted to binary notation.
+The \fIint\fR ARGUMENT is converted to binary notation.
 .IP o
-The \fIlong int\fR ARGUMENT is converted to octal notation.
+The \fIint\fR ARGUMENT is converted to octal notation.
 .IP "x, X"
-The \fIlong int\fR ARGUMENT is converted to hexadecimal notation.
+The \fIint\fR ARGUMENT is converted to hexadecimal notation.
+.IP R
+The \fIchar *\fR ARGUMENT is encrypted with ROT13.
 .RE
 
 The function works by iterating through each character of FORMAT. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the ARGUMENT.
@@ -45,6 +47,7 @@ If the number of conversion specifiers given in \fIFORMAT\fR is greater than the
 If the type of an \fIARGUMENT\fR does not match the expected type of the conversion specifier used in the string \fIFORMAT\fR, an unexpected result might occur, as well as a potential segmentation fault.
 
 .SH EXAMPLES
+.RS
 .IP 1.
 _printf("Character:[%c]", 'A');
 .br
@@ -77,8 +80,15 @@ _printf("Octal:[%o]", 2025);
 Octal:[3751]
 .IP 7.
 _printf("Hexadecimal:[%x]", 2025);
+.br
 .B Output:
 Hexadecimal:[7E9]
+.IP 8.
+_printf("ROT13:[%R]", "Hello, World!);
+.br
+.B Output:
+ROT13:[Uryyb, Jbeyq!]
+.RE
 
 .SH
 AUTHORS
