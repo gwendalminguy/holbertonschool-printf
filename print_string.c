@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_string - Function that prints a string to the standard output.
- * @args: A va_list who contains the arguments passed to the standard output.
+ * print_string - prints a string
+ * @args: string to print
  *
- * Return: The number of characters printed (excluding the null byte)
+ * Return: number of characters printed
  */
 int print_string(va_list *args)
 {
@@ -12,16 +12,16 @@ int print_string(va_list *args)
 	int i;
 	char *string;
 
-	/* Get the string argument from the va_list */
+	/* Getting the string argument */
 	string = (va_arg(*args, char *));
 
-	/* Check if the string is NULL, set it to "(null)" */
+	/* Checking if the string is NULL */
 	if (string == 0)
 		string = "(null)";
 
-	/* Loop through each character of the string and print it */
+	/* Looping through each character of the string */
 	for (i = 0; string[i] != '\0'; i++)
 		_putchar(string[i]);
 
-	return (i);/*The number of characters printed*/
+	return (i);
 }
