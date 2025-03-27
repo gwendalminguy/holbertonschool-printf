@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_ascii - prints a string without special characters
+ * print_string_ascii - prints a string without special characters
  * @args: string to print
  *
  * Return: number of characters printed
  */
-int print_ascii(va_list *args)
+int print_string_ascii(va_list *args)
 {
 
 	int i;
