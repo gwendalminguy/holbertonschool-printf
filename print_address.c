@@ -16,8 +16,8 @@ int print_address(va_list *args)
 
 	if (ptr == NULL)
 	{
-		_printf("%s", "0x0(nil)");
-		return (8);
+		_printf("%s", "(nil)");
+		return (5);
 	}
 
 	/* Getting number of digits of ptr in hexadecimal */ 
