@@ -32,6 +32,8 @@ The \fIint\fR ARGUMENT is converted to binary notation.
 The \fIint\fR ARGUMENT is converted to octal notation.
 .IP "x, X"
 The \fIint\fR ARGUMENT is converted to hexadecimal notation.
+.IP S
+The \fIchar *\fR ARGUMENT is converted to a sequence of characters, excluding special ASCII characters.
 .IP p
 The \fIvoid *\fR ARGUMENT is converted to the address of its memory location.
 .IP R

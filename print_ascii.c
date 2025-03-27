@@ -37,7 +37,7 @@ int print_ascii(va_list *args)
 			_putchar('x');
 			if (string[i] < 16)
 				_putchar('0');
-			_printf("%x", string[i]);
+			_printf("%X", string[i]);
 			len += 4;
 		}
 	}
