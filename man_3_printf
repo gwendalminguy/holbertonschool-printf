@@ -6,13 +6,15 @@
 - prints any formatted string
 
 .SH SYNOPSIS
+.B #include \)"main.h\)"
+
 .B int _printf(const char *\fIFORMAT\fR, \fIARGUMENT\fR...);
 
 .SH DESCRIPTION
 Prints the string \fIFORMAT\fR by converting, if any, each \fIARGUMENT\fR according to a mentionned conversion specifier. The function writes the output to \fISTDOUT\fR.
 
 .SS Conversion Specifiers
-Characters that can be used to apply a specific conversion to ARGUMENT. A conversion specifier can be invoked by using the symbol '%', followed by its name. If multiple conversion specifiers are invoked in string FORMAT, they will be applied to each ARGUMENT respectively. The supported conversion specifiers and their meaning are the following:
+Characters that can be used to apply a specific conversion to \fIARGUMENT\fR. A conversion specifier can be invoked by using the symbol '%', followed by its name. If multiple conversion specifiers are invoked in string \fIFORMAT\fR, they will be applied to each \fIARGUMENT\fR respectively. The supported conversion specifiers and their meaning are the following:
 .RS
 .IP %
 The '%' symbol will be printed.
@@ -30,12 +32,14 @@ The \fIint\fR ARGUMENT is converted to binary notation.
 The \fIint\fR ARGUMENT is converted to octal notation.
 .IP "x, X"
 The \fIint\fR ARGUMENT is converted to hexadecimal notation.
-.IP R
+.IP p
+The \fIvoid *\fR ARGUMENT is converted to the address of its memory location.
+.P R
 The \fIchar *\fR ARGUMENT is encrypted with ROT13.
 .RE
 
-The function works by iterating through each character of FORMAT. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the ARGUMENT.
-If the '%' symbol is provided and followed by a character for an unknown/unsupported conversion specifier, the function will simply print '%' followed by the given character, regardless of any ARGUMENT.
+The function works by iterating through each character of \fIFORMAT\fR. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the \fIARGUMENT\fR.
+If the '%' symbol is provided and followed by a character for an unknown/unsupported conversion specifier, the function will simply print '%' followed by the given character, regardless of any \fIARGUMENT\fR.
 
 .SH RETURN VALUE
 When successful, the function returns the total number of bytes printed, including the bytes of every \fIARGUMENT\fR, but excluding the null byte '\\0' terminating a string.
