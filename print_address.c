@@ -14,6 +14,12 @@ int print_address(va_list *args)
 	/* Assigning the variable ptr to the address of the argument */
 	ptr = va_arg(*args, void *);
 
+	if (ptr == NULL)
+	{
+		_printf("%s", "0x0(nil)");
+		return (8);
+	}
+
 	/* Getting number of digits of ptr in hexadecimal */ 
 	while (raise(16, len) <= (long int)ptr)
 		len++;
