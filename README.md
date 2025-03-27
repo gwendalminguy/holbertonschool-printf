@@ -109,7 +109,7 @@ int main(void)
 
 `$ The first letter in the name Hugo is H.`
 
-## �~_�~Q�~@~M�~_�~]�~@~M�~_�~Q Authors
+## 🧑‍🤝‍🧑 Authors
 
 
 This project was carried out by 
