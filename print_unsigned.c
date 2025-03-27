@@ -8,21 +8,13 @@
  */
 int print_unsigned(va_list *args)
 {
-	long int value;
-	unsigned long int abs, a, len;
+	unsigned long int value, a, len;
 	unsigned int count = 1;
 
 	len = 0;
-	value = va_arg(*args, int);
+	value = va_arg(*args, unsigned long int);
 
-	if (value < 0) /* Manage negative numbers */
-	{
-		abs = value * -1;
-	}
-	else
-		abs = value;
-
-	a = abs; /* Store the absolute value into the variable 'a' for extraction */
+	a = value; /* Store the absolute value into the variable 'a' for extraction */
 
 	while (a > 9) /* Loop to calculate how many digits abs contains */
 	{
@@ -32,7 +24,7 @@ int print_unsigned(va_list *args)
 
 	while (count >= 1) /* Extract and print each digit */
 	{
-		len = len + _putchar(((abs / count) % 10) + '0'); /* Print each digit */
+		len = len + _putchar(((value / count) % 10) + '0'); /* Print each digit */
 			count = count / 10; /* Move into the next digit */
 	}
 	return (len); /* Return the total number of characters printed */

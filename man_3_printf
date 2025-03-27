@@ -23,7 +23,7 @@ The \fIchar *\fR ARGUMENT is converted to a sequence of characters.
 .IP "i, d"
 The \fIint\fR ARGUMENT is converted to decimal notation.
 .IP u
-The \fIlong int\fR ARGUMENT is converted to unsigned notation.
+The \fIunsigned long int\fR ARGUMENT is converted to unsigned notation.
 .IP b
 The \fIlong int\fR ARGUMENT is converted to binary notation.
 .IP o
@@ -61,7 +61,7 @@ _printf("Integer:[%i]", 2025);
 .B Output:
 Integer:[2025]
 .IP 4.
-_printf("Unsigned:[%u]", -2025);
+_printf("Unsigned:[%u]", 2025);
 .br
 .B Output:
 Unsigned:[2025]
