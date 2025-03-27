@@ -24,7 +24,7 @@ Our custom `printf` function supports the following features:
 ![GCC](https://img.shields.io/badge/GCC-343741?style=for-the-badge&logo=gnu&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Vim](https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white)
-![Linux Logo](https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
+![Linux Badge](https://img.shields.io/badge/Linux-333333?style=for-the-badge&logo=linux&logoColor=white)
 
 ## 📂 Project Structure
 The project contains several files, with the following key ones:
