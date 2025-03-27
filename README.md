@@ -24,20 +24,21 @@ Our custom `printf` function supports the following features:
 ![GCC](https://img.shields.io/badge/GCC-343741?style=for-the-badge&logo=gnu&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Vim](https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=vim&logoColor=white)
+![Linux Badge](https://img.shields.io/badge/Linux-333333?style=for-the-badge&logo=linux&logoColor=white)
 
 ## 📂 Project Structure
 The project contains several files, with the following key ones:
 
 | Files | Description  |
 | :-------- | :------- |
-| `main.h` | The header file declaring the `_printf` function. |
-| `get_function.c` | Files to gets the right function according to a given character.|
-| `_printf.c` |The file where our custom `printf` function is implemented.  |
-| `print_char.c` | Function to `print` any given character. |
-| `print_string.c` | Function that `print` a string to  the standard output. |
-|`print_int.c`| Function to `print` any given integer in decimal|
- `_putchar.c`| Contains auxiliary function `_putchar` to display a character|
-|`man_3_printf`| Manual page of our function `printf`|
+| [`main.h`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/main.h) | The header file declaring the `_printf` function.	 |
+| [`get_function.c`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/get_function.c) | Files to get the right function according to a given character.|
+| [`_printf.c`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/_printf.c) |The file where our custom `printf` function is implemented.  |
+| [`print_char.c`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/print_char.c) | Function to `print` any given character. |
+| [`print_string.c`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/print_string.c) | Function that `print` a string to  the standard output. |
+|[`print_int.c`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/print_int.c)| Function to `print` any given integer in decimal|
+ [`_putchar.c`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/_putchar.c)| Contains auxiliary function `_putchar` to display a character|
+|[`man_3_printf`](https://github.com/gwendalminguy/holbertonschool-printf/blob/main/man_3_printf)| Manual page of our function `printf`|
 
 ## ⚙️ Compilation and Restrictions
 
