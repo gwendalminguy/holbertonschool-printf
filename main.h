@@ -18,14 +18,18 @@ struct conv
 
 typedef struct conv conv_t;
 
-/* all functions prototypes */
+/* All functions prototypes */
 int _putchar(char c);
 int _printf(const char *format, ...);
 int (*get_function(char c))(va_list *args);
 int print_char(va_list *args);
 int print_string(va_list *args);
 int print_int(va_list *args);
+int print_unsigned(va_list *args);
 int print_binary(va_list *args);
 long int raise(long int n, int p);
+int print_octal(va_list *args);
+int print_hexadecimal_lower(va_list *args);
+int print_hexadecimal_upper(va_list *args);
 
 #endif
