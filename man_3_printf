@@ -34,7 +34,7 @@ The \fIint\fR ARGUMENT is converted to octal notation.
 The \fIint\fR ARGUMENT is converted to hexadecimal notation.
 .IP p
 The \fIvoid *\fR ARGUMENT is converted to the address of its memory location.
-.P R
+.IP R
 The \fIchar *\fR ARGUMENT is encrypted with ROT13.
 .RE
 
@@ -83,7 +83,7 @@ _printf("Octal:[%o]", 2025);
 .B Output:
 Octal:[3751]
 .IP 7.
-_printf("Hexadecimal:[%x]", 2025);
+_printf("Hexadecimal:[%X]", 2025);
 .br
 .B Output:
 Hexadecimal:[7E9]
