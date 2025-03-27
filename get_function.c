@@ -21,6 +21,7 @@ int (*get_function(char c))(va_list * args)
 		{'o', print_octal},
 		{'x', print_hexadecimal_lower},
 		{'X', print_hexadecimal_upper},
+		{'p', print_address},
 		{'R', print_rot13},
 		{'\0', NULL}
 	};
