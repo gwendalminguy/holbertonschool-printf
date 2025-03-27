@@ -25,10 +25,13 @@ The \fIint\fR ARGUMENT is converted to decimal notation.
 .IP b
 The \fIlong int\fR ARGUMENT is converted to binary notation.
 .IP o
-The \fIlong int\fR ARGUMENT is converted to binary notation.
+The \fIlong int\fR ARGUMENT is converted to octal notation.
+.IP "x, X"
+The \fIlong int\fR ARGUMENT is converted to hexadecimal notation.
 .RE
 
-The function works by iterating through each character of FORMAT. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the ARGUMENT. If the '%' symbol is provided and followed by a character for an unknown/unsupported conversion specifier, the function will simply print '%' followed by the given character, regardless of any ARGUMENT.
+The function works by iterating through each character of FORMAT. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the ARGUMENT.
+If the '%' symbol is provided and followed by a character for an unknown/unsupported conversion specifier, the function will simply print '%' followed by the given character, regardless of any ARGUMENT.
 
 .SH RETURN VALUE
 When successful, the function returns the total number of bytes printed, including the bytes of every \fIARGUMENT\fR, but excluding the null byte '\\0' terminating a string.
@@ -65,6 +68,10 @@ _printf("Octal:[%o]", 2025);
 .br
 .B Output:
 Octal:[3751]
+.IP 6.
+_printf("Hexadecimal:[%x]", 2025);
+.B Output:
+Hexadecimal:[7E9]
 
 .SH
 AUTHORS
