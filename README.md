@@ -109,11 +109,12 @@ int main(void)
 
 `$ The first letter in the name Hugo is H.`
 
-## 🧑‍🤝‍🧑 Authors 
+## �~_�~Q�~@~M�~_�~]�~@~M�~_�~Q Authors
 
-This project was carried out by : 
 
-	***[Gwendal Minguy](https://github.com/gwendalminguy)***
+This project was carried out by 
 
-	***[Sofian Messaoui](https://github.com/smessaoui31)***
+***[Gwendal Minguy](https://github.com/gwendalminguy)***
 
+
+***[Sofian Messaoui](https://github.com/smessaoui31)***
