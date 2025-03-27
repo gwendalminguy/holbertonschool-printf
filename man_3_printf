@@ -14,7 +14,7 @@
 Prints the string \fIFORMAT\fR by converting, if any, each \fIARGUMENT\fR according to a mentionned conversion specifier. The function writes the output to \fISTDOUT\fR.
 
 .SS Conversion Specifiers
-Characters that can be used to apply a specific conversion to \fIARGUMENT\fR. A conversion specifier can be invoked by using the symbol '%', followed by its name. If multiple conversion specifiers are invoked in string \fIFORMAT\fR, they will be applied to each \fIARGUMENT\fR respectively. The supported conversion specifiers and their meaning are the following:
+Characters that can be used to apply a specific conversion to \fIARGUMENT\fR. A conversion specifier can be invoked by using the symbol '%', followed by its name. If multiple conversion specifiers are invoked in the string \fIFORMAT\fR, they will be applied to each \fIARGUMENT\fR respectively. The supported conversion specifiers and their meaning are the following:
 .RS
 .IP %
 The '%' symbol will be printed.
@@ -31,16 +31,18 @@ The \fIint\fR ARGUMENT is converted to binary notation.
 .IP o
 The \fIint\fR ARGUMENT is converted to octal notation.
 .IP "x, X"
-The \fIint\fR ARGUMENT is converted to hexadecimal notation.
+The \fIint\fR ARGUMENT is converted to hexadecimal notation in lowercase or uppercase.
 .IP S
-The \fIchar *\fR ARGUMENT is converted to a sequence of characters, excluding special ASCII characters.
+The \fIchar *\fR ARGUMENT is converted to a sequence of characters ; special characters are converted to their ASCII value in hexadecimal notation.
 .IP p
-The \fIvoid *\fR ARGUMENT is converted to the address of its memory location.
+The \fIvoid *\fR ARGUMENT is converted to the address of its memory location in hexadecimal notation.
+.IP r
+The \fIchar *\fR ARGUMENT is converted to a sequence of characters in reverse.
 .IP R
-The \fIchar *\fR ARGUMENT is encrypted with ROT13.
+The \fIchar *\fR ARGUMENT is converted to a sequence of characters encrypted with ROT13.
 .RE
 
-The function works by iterating through each character of \fIFORMAT\fR. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the \fIARGUMENT\fR.
+The function works by iterating through each character of the string \fIFORMAT\fR. When the '%' symbol is encountered, the function will search for a conversion specifier by looking at the next character, and call the appropriate function to treat the \fIARGUMENT\fR.
 If the '%' symbol is provided and followed by a character for an unknown/unsupported conversion specifier, the function will simply print '%' followed by the given character, regardless of any \fIARGUMENT\fR.
 
 .SH RETURN VALUE
@@ -49,7 +51,7 @@ In case of error, the function will execute and return a negative value (-1).
 
 .SH ERRORS
 If the last character of the string \fIFORMAT\fR consist in a single '%' character, the function will print the rest of the string and return a negative value.
-If the number of conversion specifiers given in \fIFORMAT\fR is greater than the number of \fIARGUMENT\fR provided, a segentation fault will occur.
+If the number of conversion specifiers given in the string \fIFORMAT\fR is greater than the number of \fIARGUMENT\fR provided, a segentation fault will occur.
 If the type of an \fIARGUMENT\fR does not match the expected type of the conversion specifier used in the string \fIFORMAT\fR, an unexpected result might occur, as well as a potential segmentation fault.
 
 .SH EXAMPLES
