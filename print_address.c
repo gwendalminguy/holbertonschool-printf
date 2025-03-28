@@ -11,7 +11,7 @@ int print_address(va_list *args)
 	int *ptr;
 	int len = 0;
 
-	/* Assigning the variable ptr to the address of the argument */
+	/* Assigning ptr to the address of the argument */
 	ptr = va_arg(*args, void *);
 
 	if (ptr == NULL)
@@ -20,7 +20,7 @@ int print_address(va_list *args)
 		return (5);
 	}
 
-	/* Getting number of digits of ptr in hexadecimal */ 
+	/* Getting the number of digits of ptr in hexadecimal */
 	while (raise(16, len) <= (long int)ptr)
 		len++;
 
