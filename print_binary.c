@@ -23,15 +23,15 @@ int print_binary(va_list *args)
 	while (raise(2, len) <= n)
 		len++;
 
-	power = len - 1;
+	power = len;
 
 	/* Printing the digit for each power of 2 (from highest to 0) */
-	while (power >= 0)
+	while (power > 0)
 	{
-		if (n >= raise(2, power))
+		if (n >= raise(2, power - 1))
 		{
-			digit = n / raise(2, power);
-			n = n % raise(2, power);
+			digit = n / raise(2, power - 1);
+			n = n % raise(2, power - 1);
 			_putchar('0' + digit);
 		}
 		else

@@ -23,15 +23,15 @@ int print_octal(va_list *args)
 	while (raise(8, len) <= n)
 		len++;
 
-	power = len - 1;
+	power = len;
 
 	/* Printing the digit for each power of 8 (from highest to 0) */
-	while (power >= 0)
+	while (power > 0)
 	{
-		if (n >= raise(8, power))
+		if (n >= raise(8, power - 1))
 		{
-			digit = n / raise(8, power);
-			n = n % raise(8, power);
+			digit = n / raise(8, power - 1);
+			n = n % raise(8, power - 1);
 			_putchar('0' + digit);
 		}
 		else

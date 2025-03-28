@@ -23,15 +23,15 @@ int print_hexadecimal_lower(va_list *args)
 	while (raise(16, len) <= n)
 		len++;
 
-	power = len - 1;
+	power = len;
 
 	/* Printing the digit for each power of 16 (from highest to 0) */
-	while (power >= 0)
+	while (power > 0)
 	{
-		if (n >= raise(16, power))
+		if (n >= raise(16, power - 1))
 		{
-			digit = n / raise(16, power);
-			n = n % raise(16, power);
+			digit = n / raise(16, power - 1);
+			n = n % raise(16, power - 1);
 
 			if (digit > 9)
 				_putchar(87 + digit);

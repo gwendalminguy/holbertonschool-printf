@@ -92,6 +92,11 @@ _printf("Hexadecimal:[%X]", 2025);
 .B Output:
 Hexadecimal:[7E9]
 .IP 8.
+_printf("Reverse:[%r]", "Hello, World!");
+.br
+.B Output:
+Reverse:[!dlroW ,olleH]
+.IP 9.
 _printf("ROT13:[%R]", "Hello, World!);
 .br
 .B Output:
@@ -100,7 +105,7 @@ ROT13:[Uryyb, Jbeyq!]
 
 .SH
 AUTHORS
-Messaoui Sofian, Minguy-Pèlerin Gwendal
+Sofian Messaoui, Gwendal Minguy-Pèlerin
 
 .SH
 SEE ALSO
