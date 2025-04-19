@@ -1,4 +1,4 @@
-# 🚀 Project: Creating Our Own `printf` Function
+# 🚀 Creation of a Custom `printf` Function
 
 Welcome to our custom `printf` function project! 🎉
 
@@ -87,14 +87,18 @@ It helps ensure the code is:
 
 ## 🧩 Use in Code
 
-**Let's take a look at what our** `_printf` **function actually does when implemented in your code with a** `string` **conversion specifier** (`s`):
+Let's take a look at what our `_printf` function actually does when implemented in your code with a `char`, a `string` and an `int` conversion specifiers (`%c`, `%s` & `%i`):
 
 ```
+#include "main.h"
+
 int main(void)
 {
-	char *names = "Sofian & Gwendal";
+	char *language = 'C';
+    char *names = "Sofian & Gwendal";
+    int year = 2025;
 
-    	_printf("This project was brought to you by %s!\n", names);
+    	_printf("This %c project was brought to you by %s in early %i!\n", language, names, year);
     
 	return (0);
 }
@@ -102,25 +106,7 @@ int main(void)
 
 **Now let's take a look at the output:**
 
-`$ This project was brought to you by Sofian & Gwendal!`
-
-**For the second example, let's see what the function** `_printf` **does with a** `character` **and an** `integer` **conversion specifiers** (`c` and `i`):
-
-```
-int main(void)
-{
-	char letter = 'H';
-	int number = 4;
-	
-	_printf("The name Hugo starts with a %c and is %i letters long.\n", letter, number);
-
-	return (0);
-}
-```
-
-**Now let's take a look at the output:**
-
-`$ The name Hugo starts with a H and is 4 letters long.`
+`$ This C project was brought to you by Sofian & Gwendal in early 2025!`
 
 ## 💾 Use of Memory
 
