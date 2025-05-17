@@ -120,8 +120,7 @@ root@b6579b5f94d3:/home/ubuntu/holbertonschool-printf# valgrind ./a.out
 ==27531== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
 ==27531== Command: ./a.out
 ==27531== 
-This project was brought to you by Sofian & Gwendal!
-The name Hugo starts with a H and is 4 letters long.
+This C project was brought to you by Sofian & Gwendal in early 2025!
 ==27531== 
 ==27531== HEAP SUMMARY:
 ==27531==     in use at exit: 0 bytes in 0 blocks
